@@ -8,5 +8,3 @@ images:
 serviceAccount: supreme-697@acquired-backup-448721-c3.iam.gserviceaccount.com
 options:
   logging: CLOUD_LOGGING_ONLY
-
-
