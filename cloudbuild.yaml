@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/sandboxaq-lqm:latest', '.']
+  dir: dockerfile.dockerfile  # adjust if needed
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/sandboxaq-lqm:latest']
+images:
+- 'gcr.io/$PROJECT_ID/sandboxaq-lqm:latest'
+options:
+  service_account: supreme-697@acquired-backup-448721-c3.iam.gserviceaccount.com
+  logging: CLOUD_LOGGING_ONLY
